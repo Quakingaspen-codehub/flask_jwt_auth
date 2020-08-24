@@ -12,7 +12,8 @@
 This module contains a simple class to implement authentication and authorization in a Flask app using JSON Web Token (JWT)
  
 <h2 id="Started">Getting Started</h2>
-In order to install, open the command prompt and type:
+In order to install, open the command prompt and type ✌️:
+
 ```
 pip install flask_jwt_auth
 ```
