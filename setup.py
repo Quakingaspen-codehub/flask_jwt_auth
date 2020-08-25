@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="flask_jwt_auth",
-    version="0.0.4",
+    version="0.0.5",
     author="Quaking Aspen",
     author_email="info@quakingaspen.net",
     license='MIT',

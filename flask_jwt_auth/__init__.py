@@ -12,11 +12,14 @@ from http_status_code.standard import invalid_token, missing_token, expired_toke
 class APIAuth:
     # A decorator for authentication and authorization purpose
     @classmethod
-    def auth_required(cls, req_token='access', authorization_object=None):
+    def auth_required(cls, req_token='access', authentication_required=True, authorization_object=None):
         def decorator(fn):
             @wraps(fn)
             def wrapper(*args, **kwargs):
                 try:
+                    if not authentication_required:
+                        return fn(*args, **kwargs)
+
                     if req_token == 'access':
                         verify_jwt_in_request()
 
